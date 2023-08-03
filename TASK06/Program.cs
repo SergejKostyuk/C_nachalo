@@ -8,9 +8,7 @@
 Console.WriteLine("Введите число: ");
 int chislo = Convert.ToInt32(Console.ReadLine());
 
-float result = chislo % 2;
-
-if (result == 0)
+if (chislo %2 == 0)
 {
     Console.WriteLine("Число " + chislo + " является чётным.");
 }
