@@ -6,9 +6,25 @@
 // 32679 -> 6
 
 Console.WriteLine("Введите число, от 0 до n -> ");
-int numder = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 
+if (number<0) number = number *-1; 
 
-int result = numder % 100;
+if (CheckThreeNumbers (number))
+{
+    while (number > 999)
+    {
+       number = number/10; 
+    }
+    int lastDigit = number%10;
+    Console.WriteLine("Последняя цифра:  " + lastDigit);  
+}
+else 
+{
+    Console.WriteLine("Нет третьего числа");
+}
 
-Console.WriteLine($"Третья цифра числа: {result}");
+bool CheckThreeNumbers (int numb)
+{
+    return numb >= 100;
+}
