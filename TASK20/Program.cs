@@ -5,8 +5,8 @@
 // A (3,6); B (2,1) -> 5,09
 // A (7,-5); B (1,-1) -> 7,21
 
-// double d = 5.098725;
-// double dRound = Math.Round(d,2, MidpointRounding.ToZero);
+
+// double dRound = Math.Round(d,2, MidpointRounding.ToZero); форматирование до 2-ух знаков после запятой
 // Console.WriteLine(dRound); // форматирование до 2-ух знаков после запятой 
 
 // Console.WriteLine($"{d:F}"); // форматирование до 2-ух знаков после запятой
