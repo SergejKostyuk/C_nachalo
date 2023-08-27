@@ -4,7 +4,12 @@
 
 bool CheckingNumber (int numberChecking)
 {
-    if (numberChecking < 100000 && numberChecking >= 10000)
+    int a = numberChecking;
+    if (a < 0 )
+    {
+        a = a * -1;
+    }
+    if (a< 100000 && a >= 10000)
     {
         return true;
     }
