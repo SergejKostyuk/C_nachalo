@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 bool NaturalNumber (int degre)
 {
-    if (degre > 0) 
+    if (degre >= 0) 
     {
         return true;
     } else return false;
