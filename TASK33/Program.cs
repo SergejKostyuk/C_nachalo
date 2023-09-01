@@ -1,9 +1,7 @@
 ﻿// Задайте массив. Напишите программу, которая
 // определяет, присутствует ли заданное число в массиве.
 // 4; массив [6, 7, 19, 345, 3] -> нет
-// 3; массив [6, 7, 19, 345, 3] -> да
-
-using Internal;
+// 3; массив [6, 7, 19, 345, 3] -> да 
 
 int [] CreateArrayRndInt(int size, int min, int max)
 {
@@ -36,10 +34,11 @@ bool FindNum (int[] arr, int num)
     return false; 
 }
 
-Console.WriteLine("Введите число для проверки: ");
-int number = Convert.ToInt32(Console.ReadLine());
-
-
 int [] array = CreateArrayRndInt(4, -9, 9);
 PrintArray(array);
 
+Console.WriteLine("Введите число для проверки: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+bool findNum = FindNum(array, number);
+Console.WriteLine(findNum ? "Число присутствует.": "Число отсутствует.");
