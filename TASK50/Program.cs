@@ -37,16 +37,7 @@ void PrintArray(int[,] matr)
 
 bool IndexInTheMatrix(int[,] matr, int lin, int colum)
 {
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-
-        }
-    } 
-    return true;
-
-
+    return matr.GetLength(0) >= lin && matr.GetLength(1) >= colum;
 }
 
 void PrintNumberIndex(int[,] matrix, int lin, int colum)
@@ -63,5 +54,5 @@ int[,] createMatrixRndInt = CreateMatrixRndInt(3, 4, -100, 100);
 PrintArray(createMatrixRndInt);
 Console.WriteLine();
 bool indexInTheMatrix = IndexInTheMatrix(createMatrixRndInt, line, column);
-Console.WriteLine(indexInTheMatrix ? $"ДА" : "такого элемента в массиве нет");
-PrintNumberIndex(createMatrixRndInt, line, column);
+if (indexInTheMatrix) PrintNumberIndex(createMatrixRndInt, line, column);
+else Console.WriteLine("Такого элемента в массиве нет");
