@@ -3,8 +3,6 @@
 // невозможно, программа должна вывести сообщение для
 // пользователя.
 
-using Internal;
-
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];

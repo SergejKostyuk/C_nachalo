@@ -35,13 +35,15 @@ void PrintMatrix(int[,] matr)
 
 double[] ArithmeticMean(int[,] matr)
 {
-    double sum = 0;
+
     double[] arr = new double[matr.GetLength(1)];
     for (int j = 0; j < matr.GetLength(1); j++)
     {
+        double sum = 0;
         for (int i = 0; i < matr.GetLength(0); i++)
         {
-            arr[j] += matr[i, j] / matr.GetLength(0);
+            sum += matr[i, j];
+            arr[j] = sum / matr.GetLength(0);
             arr[j] = Math.Round(arr[j], 1, MidpointRounding.ToZero);
         }
     }
@@ -50,10 +52,10 @@ double[] ArithmeticMean(int[,] matr)
 
 void PrintArray(double[] arr)
 {
-    Console.Write("[");
+    Console.Write("Среднее арифметическое каждого столбца: [");
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i < arr.Length - 1) Console.Write($"{arr[i]} |");
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}; ");
         else Console.Write($"{arr[i]}");
     }
     Console.WriteLine("]");
